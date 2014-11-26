@@ -14,6 +14,18 @@
 		76CBAE221A25687B00A38D61 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76CBAE211A25687B00A38D61 /* Images.xcassets */; };
 		76CBAE251A25687B00A38D61 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76CBAE231A25687B00A38D61 /* LaunchScreen.xib */; };
 		76CBAE311A25687B00A38D61 /* Demo1126AFNertworking_CLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 76CBAE301A25687B00A38D61 /* Demo1126AFNertworking_CLTests.m */; };
+		76CBAE501A2569FB00A38D61 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 76CBAE3E1A2569FB00A38D61 /* AFHTTPClient.m */; };
+		76CBAE511A2569FB00A38D61 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 76CBAE401A2569FB00A38D61 /* AFHTTPRequestOperation.m */; };
+		76CBAE521A2569FB00A38D61 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 76CBAE421A2569FB00A38D61 /* AFImageRequestOperation.m */; };
+		76CBAE531A2569FB00A38D61 /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 76CBAE441A2569FB00A38D61 /* AFJSONRequestOperation.m */; };
+		76CBAE541A2569FB00A38D61 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 76CBAE461A2569FB00A38D61 /* AFNetworkActivityIndicatorManager.m */; };
+		76CBAE551A2569FB00A38D61 /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 76CBAE491A2569FB00A38D61 /* AFPropertyListRequestOperation.m */; };
+		76CBAE561A2569FB00A38D61 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 76CBAE4B1A2569FB00A38D61 /* AFURLConnectionOperation.m */; };
+		76CBAE571A2569FB00A38D61 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 76CBAE4D1A2569FB00A38D61 /* AFXMLRequestOperation.m */; };
+		76CBAE581A2569FB00A38D61 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 76CBAE4F1A2569FB00A38D61 /* UIImageView+AFNetworking.m */; };
+		76CBAE5D1A256A2600A38D61 /* btn_nav_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 76CBAE5B1A256A2600A38D61 /* btn_nav_back.png */; };
+		76CBAE5E1A256A2600A38D61 /* btn_nav_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76CBAE5C1A256A2600A38D61 /* btn_nav_back@2x.png */; };
+		76CBAE621A2574BF00A38D61 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 76CBAE611A2574BF00A38D61 /* MBProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +52,29 @@
 		76CBAE2A1A25687B00A38D61 /* Demo1126AFNertworking_CLTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Demo1126AFNertworking_CLTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		76CBAE2F1A25687B00A38D61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76CBAE301A25687B00A38D61 /* Demo1126AFNertworking_CLTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Demo1126AFNertworking_CLTests.m; sourceTree = "<group>"; };
+		76CBAE3D1A2569FB00A38D61 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
+		76CBAE3E1A2569FB00A38D61 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
+		76CBAE3F1A2569FB00A38D61 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		76CBAE401A2569FB00A38D61 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		76CBAE411A2569FB00A38D61 /* AFImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageRequestOperation.h; sourceTree = "<group>"; };
+		76CBAE421A2569FB00A38D61 /* AFImageRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageRequestOperation.m; sourceTree = "<group>"; };
+		76CBAE431A2569FB00A38D61 /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONRequestOperation.h; sourceTree = "<group>"; };
+		76CBAE441A2569FB00A38D61 /* AFJSONRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONRequestOperation.m; sourceTree = "<group>"; };
+		76CBAE451A2569FB00A38D61 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		76CBAE461A2569FB00A38D61 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
+		76CBAE471A2569FB00A38D61 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		76CBAE481A2569FB00A38D61 /* AFPropertyListRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPropertyListRequestOperation.h; sourceTree = "<group>"; };
+		76CBAE491A2569FB00A38D61 /* AFPropertyListRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPropertyListRequestOperation.m; sourceTree = "<group>"; };
+		76CBAE4A1A2569FB00A38D61 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		76CBAE4B1A2569FB00A38D61 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		76CBAE4C1A2569FB00A38D61 /* AFXMLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFXMLRequestOperation.h; sourceTree = "<group>"; };
+		76CBAE4D1A2569FB00A38D61 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
+		76CBAE4E1A2569FB00A38D61 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		76CBAE4F1A2569FB00A38D61 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		76CBAE5B1A256A2600A38D61 /* btn_nav_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_nav_back.png; sourceTree = "<group>"; };
+		76CBAE5C1A256A2600A38D61 /* btn_nav_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_nav_back@2x.png"; sourceTree = "<group>"; };
+		76CBAE601A2574BF00A38D61 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = MBProgress/MBProgressHUD.h; sourceTree = SOURCE_ROOT; };
+		76CBAE611A2574BF00A38D61 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = MBProgress/MBProgressHUD.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +116,7 @@
 		76CBAE131A25687B00A38D61 /* Demo1126AFNertworking_CL */ = {
 			isa = PBXGroup;
 			children = (
+				76CBAE3A1A2569A600A38D61 /* Library */,
 				76CBAE181A25687B00A38D61 /* AppDelegate.h */,
 				76CBAE191A25687B00A38D61 /* AppDelegate.m */,
 				76CBAE1B1A25687B00A38D61 /* ViewController.h */,
@@ -96,6 +132,7 @@
 		76CBAE141A25687B00A38D61 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				76CBAE591A256A0000A38D61 /* Images */,
 				76CBAE151A25687B00A38D61 /* Info.plist */,
 				76CBAE161A25687B00A38D61 /* main.m */,
 			);
@@ -117,6 +154,77 @@
 				76CBAE2F1A25687B00A38D61 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		76CBAE3A1A2569A600A38D61 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				76CBAE5F1A25749100A38D61 /* MBProgress */,
+				76CBAE3B1A2569BA00A38D61 /* AFNetworking */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		76CBAE3B1A2569BA00A38D61 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				76CBAE3C1A2569FB00A38D61 /* AFNetworking */,
+			);
+			name = AFNetworking;
+			sourceTree = "<group>";
+		};
+		76CBAE3C1A2569FB00A38D61 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				76CBAE3D1A2569FB00A38D61 /* AFHTTPClient.h */,
+				76CBAE3E1A2569FB00A38D61 /* AFHTTPClient.m */,
+				76CBAE3F1A2569FB00A38D61 /* AFHTTPRequestOperation.h */,
+				76CBAE401A2569FB00A38D61 /* AFHTTPRequestOperation.m */,
+				76CBAE411A2569FB00A38D61 /* AFImageRequestOperation.h */,
+				76CBAE421A2569FB00A38D61 /* AFImageRequestOperation.m */,
+				76CBAE431A2569FB00A38D61 /* AFJSONRequestOperation.h */,
+				76CBAE441A2569FB00A38D61 /* AFJSONRequestOperation.m */,
+				76CBAE451A2569FB00A38D61 /* AFNetworkActivityIndicatorManager.h */,
+				76CBAE461A2569FB00A38D61 /* AFNetworkActivityIndicatorManager.m */,
+				76CBAE471A2569FB00A38D61 /* AFNetworking.h */,
+				76CBAE481A2569FB00A38D61 /* AFPropertyListRequestOperation.h */,
+				76CBAE491A2569FB00A38D61 /* AFPropertyListRequestOperation.m */,
+				76CBAE4A1A2569FB00A38D61 /* AFURLConnectionOperation.h */,
+				76CBAE4B1A2569FB00A38D61 /* AFURLConnectionOperation.m */,
+				76CBAE4C1A2569FB00A38D61 /* AFXMLRequestOperation.h */,
+				76CBAE4D1A2569FB00A38D61 /* AFXMLRequestOperation.m */,
+				76CBAE4E1A2569FB00A38D61 /* UIImageView+AFNetworking.h */,
+				76CBAE4F1A2569FB00A38D61 /* UIImageView+AFNetworking.m */,
+			);
+			name = AFNetworking;
+			path = AFNetworking/AFNetworking;
+			sourceTree = SOURCE_ROOT;
+		};
+		76CBAE591A256A0000A38D61 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				76CBAE5A1A256A2600A38D61 /* sample_pic */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		76CBAE5A1A256A2600A38D61 /* sample_pic */ = {
+			isa = PBXGroup;
+			children = (
+				76CBAE5B1A256A2600A38D61 /* btn_nav_back.png */,
+				76CBAE5C1A256A2600A38D61 /* btn_nav_back@2x.png */,
+			);
+			name = sample_pic;
+			path = Images/sample_pic;
+			sourceTree = SOURCE_ROOT;
+		};
+		76CBAE5F1A25749100A38D61 /* MBProgress */ = {
+			isa = PBXGroup;
+			children = (
+				76CBAE601A2574BF00A38D61 /* MBProgressHUD.h */,
+				76CBAE611A2574BF00A38D61 /* MBProgressHUD.m */,
+			);
+			name = MBProgress;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +310,8 @@
 				76CBAE201A25687B00A38D61 /* Main.storyboard in Resources */,
 				76CBAE251A25687B00A38D61 /* LaunchScreen.xib in Resources */,
 				76CBAE221A25687B00A38D61 /* Images.xcassets in Resources */,
+				76CBAE5D1A256A2600A38D61 /* btn_nav_back.png in Resources */,
+				76CBAE5E1A256A2600A38D61 /* btn_nav_back@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,9 +329,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76CBAE521A2569FB00A38D61 /* AFImageRequestOperation.m in Sources */,
 				76CBAE1D1A25687B00A38D61 /* ViewController.m in Sources */,
+				76CBAE551A2569FB00A38D61 /* AFPropertyListRequestOperation.m in Sources */,
 				76CBAE1A1A25687B00A38D61 /* AppDelegate.m in Sources */,
+				76CBAE561A2569FB00A38D61 /* AFURLConnectionOperation.m in Sources */,
+				76CBAE571A2569FB00A38D61 /* AFXMLRequestOperation.m in Sources */,
+				76CBAE531A2569FB00A38D61 /* AFJSONRequestOperation.m in Sources */,
+				76CBAE581A2569FB00A38D61 /* UIImageView+AFNetworking.m in Sources */,
+				76CBAE541A2569FB00A38D61 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				76CBAE621A2574BF00A38D61 /* MBProgressHUD.m in Sources */,
+				76CBAE511A2569FB00A38D61 /* AFHTTPRequestOperation.m in Sources */,
 				76CBAE171A25687B00A38D61 /* main.m in Sources */,
+				76CBAE501A2569FB00A38D61 /* AFHTTPClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +532,7 @@
 				76CBAE361A25687B00A38D61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		76CBAE371A25687B00A38D61 /* Build configuration list for PBXNativeTarget "Demo1126AFNertworking_CLTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +541,7 @@
 				76CBAE391A25687B00A38D61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
