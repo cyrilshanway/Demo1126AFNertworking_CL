@@ -10,13 +10,19 @@
 #import "AFNetworking.h"
 #import "MBProgressHUD.h"
 
-@interface ViewController ()<UITableViewDataSource, UITableViewDelegate, MBProgressHUDDelegate>
+@interface ViewController ()<UITableViewDataSource, UITableViewDelegate, MBProgressHUDDelegate,UITextFieldDelegate>
 {
     MBProgressHUD *progressHUD;
     NSMutableArray *dataSource;
+    NSTimer *_timer;
+    double timerNumber;
 }
+@property (weak, nonatomic) IBOutlet UILabel *timerLabel;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIButton *startTimer;
+@property (weak, nonatomic) IBOutlet UIButton *pauseTimer;
+@property (weak, nonatomic) IBOutlet UITextField *textField;
 
 @end
 
@@ -45,11 +51,53 @@
                                                                   action:@selector(back:)];
     self.navigationItem.leftBarButtonItem = leftButton;
     
+    
+    //1127
+    UIButton *a1 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [a1 setFrame:CGRectMake(0.0f, 0.0f, 46.0f, 29.0f)];
+    [a1 addTarget:self action:@selector(enterEditMode:) forControlEvents:(UIControlEventTouchUpInside)];
+    [a1 setTitle:@"編輯" forState:(UIControlStateNormal)];
+    [a1.titleLabel setFont:[UIFont systemFontOfSize:13.0f]];
+    [a1 setTitleColor:[UIColor purpleColor] forState:(UIControlStateNormal)];
+    a1.titleLabel.textColor =[UIColor blackColor];
+    UIBarButtonItem *right1Button = [[UIBarButtonItem alloc] initWithCustomView:a1];
+    
+    UIButton *a2 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [a2 setFrame:CGRectMake(0.0f, 0.0f, 46.0f, 29.0f)];
+    [a2 addTarget:self action:@selector(leaveEditMode:) forControlEvents:(UIControlEventTouchUpInside)];
+    [a2 setTitle:@"結束" forState:(UIControlStateNormal)];
+    [a2.titleLabel setFont:[UIFont systemFontOfSize:13.0f]];
+    [a2 setTitleColor:[UIColor greenColor] forState:(UIControlStateNormal)];
+    a2.titleLabel.textColor =[UIColor blackColor];
+    UIBarButtonItem *right2Button = [[UIBarButtonItem alloc] initWithCustomView:a2];
+    
+    self.navigationItem.rightBarButtonItems =@[right1Button,right2Button];
+    
+    
+    [self.startTimer.layer setCornerRadius:10.0f];
+    [self.startTimer.layer setBorderColor:[[UIColor blackColor] CGColor]];
+    [self.startTimer.layer setBorderWidth:2.0f];
+    
+    [self.pauseTimer.layer setCornerRadius:10.0f];
+    [self.pauseTimer.layer setBorderColor:[[UIColor blackColor] CGColor]];
+    [self.pauseTimer.layer setBorderWidth:2.0f];
+
+    
     //建立一個空的dataSource//11/26(step.1)
     dataSource = [NSMutableArray arrayWithCapacity:0];
     
     [self getRemoteURL];
+    
+    [self.textField becomeFirstResponder];
+    
+}
 
+-(void)enterEditMode:(id)sender{
+    NSLog(@"enterEditMode");
+}
+
+-(void)leaveEditMode:(id)sender{
+    NSLog(@"leaveEditMode");
 }
 
 - (void)didReceiveMemoryWarning {
@@ -76,6 +124,20 @@
     progressHUD.removeFromSuperViewOnHide = YES;
     [progressHUD show:YES];
 }
+
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    
+    NSLog(@"textFieldShouldBeginEditing");
+    
+    return YES;
+}
+
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField{
+    NSLog(@"textFieldShouldEndEditing");
+    return YES;
+}
+
+
 #pragma mark - AFNetworking
 -(void)getRemoteURL{
 #pragma mark - progressed 載入中
@@ -176,16 +238,19 @@
 //分類
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
+    NSLog(@"numberOfSectionsInTableView");
     return 1;
 }
 //欄位高
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSLog(@"heightForRowAtIndexPath");
     return 60.0;
 }
 //要顯示幾個欄位
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    NSLog(@"numberOfRowsInSection");
     NSLog(@"Source count: %ld", dataSource.count);
     return dataSource.count;
 }
@@ -289,10 +354,27 @@
     [button.layer setBorderWidth:2.0f];
     
     
+    UIButton *openTELBtn = [[UIButton alloc]initWithFrame:CGRectMake(140, 10, 80, 40)];
+    [button setTitle:@"Open" forState:UIControlStateNormal];
+    button.titleLabel.font = [UIFont fontWithName: @"AvenirNextCondensed-Bold" size: 12.0];
+    [button setBackgroundColor:[UIColor brownColor]];
+    button.tag = indexPath.row;
+    
+    [button addTarget:self action:@selector(openWeb:) forControlEvents:UIControlEventTouchUpInside];
+    [cell.contentView addSubview:button];
+    
+    [button.layer setCornerRadius:10.0f];
+    [button.layer setBorderColor:[[UIColor whiteColor] CGColor]];
+    [button.layer setBorderWidth:2.0f];
    
     
-    
+    NSLog(@"cellForRowAtIndexPath");
     return cell;
+}
+
+-(void)openWeb:(id)sender{
+    NSString *url = [NSString stringWithFormat:@"http://%@", self.textField.text];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -314,7 +396,37 @@
      */
     
 }
+#pragma mark - timer
+- (IBAction)startBtnPressed:(id)sender {
+    
+    //1127
+    double interval = 1.0f;
+    _timer = [NSTimer scheduledTimerWithTimeInterval:interval
+                                              target:self
+                                            selector:@selector(timerEvent:)
+                                            userInfo:nil
+                                             repeats:true];
 
+}
+- (IBAction)stopBtnPressed:(id)sender {
+    [_timer invalidate];
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提醒"
+                                                    message:@"已停止"
+                                                   delegate:self
+                                          cancelButtonTitle:@"確認"
+                                          otherButtonTitles: nil];
+    [alert show];
+    
+}
+
+- (void)timerEvent:(NSTimer *)timer{
+    
+    
+    timerNumber += 1.0f;
+    self.timerLabel.text = [NSString stringWithFormat:@"%.2f",timerNumber];
+    NSLog(@"timer event is invoked");
+}
 - (void)buttonPressed:(id)sender
 {
     
@@ -323,5 +435,12 @@
     //[button removeFromSuperview];
     NSLog(@"You pressed the button %ld", button.tag);
     
+}
+- (IBAction)completeBtnPressed:(id)sender {
+    //空白處理
+    NSString *final = [self.textField.text stringByReplacingOccurrencesOfString:@" " withString:@""];
+    NSLog(@"%@", final);
+    
+    [self.textField resignFirstResponder];
 }
 @end
